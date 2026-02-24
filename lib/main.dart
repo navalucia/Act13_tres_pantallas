@@ -17,10 +17,13 @@ class AppCafeteria extends StatelessWidget {
       title: 'Cafetería App',
       home: const MenuPrincipal(),
     );
+     initialRoute: '/',
+      // Aquí declaramos el "mapa" de direcciones de nuestra app
+      routes: {
+        '/': (context) => const MenuPrincipal(),
+        '/detalle': (context) => const DetalleProducto(),
+        '/carrito': (context) => const CarritoCompra(),
+      },
   }
 }
 
-
-// ---------------------------------------------------------
-// PANTALLA 3: CARRITO DE COMPRA
-// ---------------------------------------------------------
